@@ -1,0 +1,60 @@
+# ===============================
+# IntelliJ IDEA
+# ===============================
+.idea/
+*.iml
+*.iws
+out/
+
+# ===============================
+# Maven / Build
+# ===============================
+target/
+**/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+build/
+
+# Maven Wrapper JAR (keep properties, ignore jar)
+.mvn/wrapper/maven-wrapper.jar
+
+# ===============================
+# Logs
+# ===============================
+logs/
+*.log
+
+# ===============================
+# OS Files
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Environment / Secrets
+# ===============================
+.env
+application-secret.properties
+*.key
+*.pem
+
+# ===============================
+# Node (if frontend inside repo)
+# ===============================
+node_modules/
+
+# ===============================
+# IDEs / Editors
+# ===============================
+.vscode/
+*.swp
+*.swo
+
+# ===============================
+# Test / Coverage
+# ===============================
+coverage/
