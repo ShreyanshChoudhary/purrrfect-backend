@@ -1,9 +1,7 @@
-Purrrfect Backend 🐾
+🐾 Purrrfect Backend
 
-Purrrfect Backend is a Spring Boot–based REST API that powers the Purrrfect pet platform.
-It handles authentication, product management, chatbot integration, image uploads, and secure user operations.
-
-Built with a scalable layered architecture following industry backend standards.
+Backend REST API for the Purrrfect Pet Platform built with Spring Boot.
+Handles authentication, pet/product management, chatbot AI integration, and secure media uploads.
 
 🚀 Tech Stack
 
@@ -25,46 +23,46 @@ Hugging Face API (AI Chatbot)
 
 Maven
 
+📂 Project Structure
 src/main/java/com/Purrrfect
 │
 ├── Config
-│   ├── SecurityConfig.java
-│   ├── WebConfig.java
-│   ├── CloudinaryConfig.java
-│   └── AppConfig.java
+│   ├── SecurityConfig.java        # Spring Security & JWT config
+│   ├── WebConfig.java             # CORS & Web settings
+│   ├── CloudinaryConfig.java      # Cloudinary integration
+│   └── AppConfig.java             # General bean configs
 │
-├── Controller
+├── Controller                    # REST API endpoints
 │   ├── AuthController.java
 │   ├── ProductController.java
 │   ├── UserController.java
 │   └── ChatbotController.java
 │
-├── Service
+├── Service                      # Business logic layer
 │   ├── ProductService.java
 │   ├── ProductServiceImpl.java
 │   ├── UserService.java
 │   └── ChatbotService.java
 │
-├── Repo
+├── Repo                         # Database repositories
 │   ├── ProductRepo.java
 │   ├── UserRepo.java
 │   └── PetDetailsRepo.java
 │
-├── Model / DTO
+├── Model / DTO                  # Entities & request payloads
 │   ├── User.java
 │   ├── Product.java
 │   ├── PetDetails.java
 │   ├── LoginRequest.java
 │   └── SignupRequest.java
 │
-├── Security
+├── Security                     # Auth & token handling
 │   ├── JwtAuthenticationFilter.java
 │   ├── JwtTokenProvider.java
 │   ├── JwtHelper.java
 │   └── OAuth2SuccessHandler.java
 │
-└── PurrrfectBackendApplication.java
-
+└── PurrrfectBackendApplication.java   # Main Spring Boot entry point
 
 🔐 Authentication Features
 
@@ -84,45 +82,45 @@ Add / update / delete pets
 
 Product listing APIs
 
-Image upload via Cloudinary
-
 Pet details management
 
-MySQL persistence
+MySQL database persistence
 
-🤖 AI Chatbot
+Image uploads via Cloudinary
 
-Integrated Hugging Face inference API to:
+🤖 AI Chatbot Integration
 
-Suggest pets
+Powered by Hugging Face Inference API:
 
-Answer user queries
+Pet recommendations
 
-Provide buying guidance
+Buyer guidance
 
-☁️ Image Upload
+FAQ automation
 
-Cloudinary integration enables:
+☁️ Media Storage
+
+Cloudinary Integration
 
 Secure image hosting
 
-Fast CDN delivery
+CDN delivery
 
-Product & pet image storage
+Optimized pet/product images
 
-⚙️ Setup & Installation
-1️⃣ Clone repo
+⚙️ Local Setup
+1️⃣ Clone repository
 git clone https://github.com/ShreyanshChoudhary/purrrfect-backend.git
 cd purrrfect-backend
 
-2️⃣ Configure environment
+2️⃣ Configure secrets
 
-Create:
+Create file:
 
-application-secret.properties
+src/main/resources/application-secret.properties
 
 
-Add credentials:
+Example:
 
 DB_USERNAME=your_db_user
 DB_PASSWORD=your_db_pass
@@ -136,62 +134,55 @@ HF_TOKEN=xxx
 MAIL_USER=xxx
 MAIL_PASS=xxx
 
-3️⃣ Run application
+3️⃣ Run backend
 
-Using Maven wrapper:
+Linux / Mac:
 
 ./mvnw spring-boot:run
 
 
-Or Windows:
+Windows:
 
 mvnw.cmd spring-boot:run
 
 
-App runs on:
+App runs at:
 
 http://localhost:8081
 
 🔗 API Base URL
 http://localhost:8081/api/
 
-
-Example endpoints:
-
+Sample Endpoints
 Method	Endpoint	Description
-POST	/auth/login	User login
 POST	/auth/signup	Register user
-GET	/products	Get all pets/products
+POST	/auth/login	Login
+GET	/products	Get pets/products
 POST	/products	Add product
-POST	/chatbot	AI chatbot query
-🛡️ Security Notes
+POST	/chatbot	AI query
+🛡️ Security Practices
 
-Secrets stored via external config
+Externalized secrets
 
 JWT signed tokens
 
-OAuth2 secured login
+OAuth2 authentication
 
-CORS configured for frontend
+CORS configured
+
+Encrypted credentials
 
 📌 Future Enhancements
 
 Payment gateway integration
 
-Order management system
+Order management
 
-Admin analytics dashboard
+Admin dashboard
 
-Pet recommendation engine (ML)
+ML pet recommendation engine
 
 👨‍💻 Author
 
 Shreyansh Choudhary
-Full Stack Developer (Spring Boot + React)
-
-Backend APIs
-
-AI chatbot integration
-
-Secure authentication systems
-
+Full Stack Developer — Spring Boot & React
