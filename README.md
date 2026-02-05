@@ -23,19 +23,34 @@ Hugging Face API (AI Chatbot)
 
 Maven
 
-📂 Project Structure
-<details> <summary><b>Click to expand folder structure</b></summary> <br> <ul> <li><b>src/main/java/com/Purrrfect</b> <ul>
 
-  <li><b>Config</b>
+🏗️ System Architecture
+flowchart LR
+
+A[React Frontend] -->|REST API| B[Spring Boot Backend]
+
+B --> C[JWT Authentication]
+B --> D[Google OAuth2]
+B --> E[Chatbot Service]
+
+E -->|API Call| F[Hugging Face AI]
+
+B --> G[Cloudinary]
+B --> H[MySQL Database]
+
+C --> H
+D --> H
+
+  <li><b>📁 Config</b>
     <ul>
       <li><code>SecurityConfig.java</code> — Spring Security & JWT config</li>
       <li><code>WebConfig.java</code> — CORS & Web settings</li>
       <li><code>CloudinaryConfig.java</code> — Cloudinary integration</li>
-      <li><code>AppConfig.java</code> — General bean configs</li>
+      <li><code>AppConfig.java</code> — Bean configs</li>
     </ul>
   </li>
 
-  <li><b>Controller</b>
+  <li><b>📁 Controller</b>
     <ul>
       <li><code>AuthController.java</code></li>
       <li><code>ProductController.java</code></li>
@@ -44,7 +59,7 @@ Maven
     </ul>
   </li>
 
-  <li><b>Service</b>
+  <li><b>📁 Service</b>
     <ul>
       <li><code>ProductService.java</code></li>
       <li><code>ProductServiceImpl.java</code></li>
@@ -53,7 +68,7 @@ Maven
     </ul>
   </li>
 
-  <li><b>Repo</b>
+  <li><b>📁 Repo</b>
     <ul>
       <li><code>ProductRepo.java</code></li>
       <li><code>UserRepo.java</code></li>
@@ -61,7 +76,7 @@ Maven
     </ul>
   </li>
 
-  <li><b>Model / DTO</b>
+  <li><b>📁 Model / DTO</b>
     <ul>
       <li><code>User.java</code></li>
       <li><code>Product.java</code></li>
@@ -71,7 +86,7 @@ Maven
     </ul>
   </li>
 
-  <li><b>Security</b>
+  <li><b>📁 Security</b>
     <ul>
       <li><code>JwtAuthenticationFilter.java</code></li>
       <li><code>JwtTokenProvider.java</code></li>
@@ -81,10 +96,11 @@ Maven
   </li>
 
   <li>
-    <code>PurrrfectBackendApplication.java</code> — Main Spring Boot entry point
+    <code>PurrrfectBackendApplication.java</code> — Main entry point
   </li>
 
 </ul>
+
 
 
 🔐 Authentication Features
@@ -130,6 +146,23 @@ Secure image hosting
 CDN delivery
 
 Optimized pet/product images
+
+sequenceDiagram
+
+participant U as User
+participant F as Frontend
+participant B as Backend
+participant DB as Database
+participant AI as HuggingFace
+
+U->>F: Request action
+F->>B: API call
+B->>DB: Fetch/Store data
+B->>AI: Chatbot query
+AI-->>B: Response
+B-->>F: JSON response
+F-->>U: UI update
+
 
 ⚙️ Local Setup
 1️⃣ Clone repository
