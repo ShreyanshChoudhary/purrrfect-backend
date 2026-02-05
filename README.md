@@ -24,45 +24,68 @@ Hugging Face API (AI Chatbot)
 Maven
 
 📂 Project Structure
-src/main/java/com/Purrrfect
-│
-├── Config
-│   ├── SecurityConfig.java        # Spring Security & JWT config
-│   ├── WebConfig.java             # CORS & Web settings
-│   ├── CloudinaryConfig.java      # Cloudinary integration
-│   └── AppConfig.java             # General bean configs
-│
-├── Controller                    # REST API endpoints
-│   ├── AuthController.java
-│   ├── ProductController.java
-│   ├── UserController.java
-│   └── ChatbotController.java
-│
-├── Service                      # Business logic layer
-│   ├── ProductService.java
-│   ├── ProductServiceImpl.java
-│   ├── UserService.java
-│   └── ChatbotService.java
-│
-├── Repo                         # Database repositories
-│   ├── ProductRepo.java
-│   ├── UserRepo.java
-│   └── PetDetailsRepo.java
-│
-├── Model / DTO                  # Entities & request payloads
-│   ├── User.java
-│   ├── Product.java
-│   ├── PetDetails.java
-│   ├── LoginRequest.java
-│   └── SignupRequest.java
-│
-├── Security                     # Auth & token handling
-│   ├── JwtAuthenticationFilter.java
-│   ├── JwtTokenProvider.java
-│   ├── JwtHelper.java
-│   └── OAuth2SuccessHandler.java
-│
-└── PurrrfectBackendApplication.java   # Main Spring Boot entry point
+<details> <summary><b>Click to expand folder structure</b></summary> <br> <ul> <li><b>src/main/java/com/Purrrfect</b> <ul>
+
+  <li><b>Config</b>
+    <ul>
+      <li><code>SecurityConfig.java</code> — Spring Security & JWT config</li>
+      <li><code>WebConfig.java</code> — CORS & Web settings</li>
+      <li><code>CloudinaryConfig.java</code> — Cloudinary integration</li>
+      <li><code>AppConfig.java</code> — General bean configs</li>
+    </ul>
+  </li>
+
+  <li><b>Controller</b>
+    <ul>
+      <li><code>AuthController.java</code></li>
+      <li><code>ProductController.java</code></li>
+      <li><code>UserController.java</code></li>
+      <li><code>ChatbotController.java</code></li>
+    </ul>
+  </li>
+
+  <li><b>Service</b>
+    <ul>
+      <li><code>ProductService.java</code></li>
+      <li><code>ProductServiceImpl.java</code></li>
+      <li><code>UserService.java</code></li>
+      <li><code>ChatbotService.java</code></li>
+    </ul>
+  </li>
+
+  <li><b>Repo</b>
+    <ul>
+      <li><code>ProductRepo.java</code></li>
+      <li><code>UserRepo.java</code></li>
+      <li><code>PetDetailsRepo.java</code></li>
+    </ul>
+  </li>
+
+  <li><b>Model / DTO</b>
+    <ul>
+      <li><code>User.java</code></li>
+      <li><code>Product.java</code></li>
+      <li><code>PetDetails.java</code></li>
+      <li><code>LoginRequest.java</code></li>
+      <li><code>SignupRequest.java</code></li>
+    </ul>
+  </li>
+
+  <li><b>Security</b>
+    <ul>
+      <li><code>JwtAuthenticationFilter.java</code></li>
+      <li><code>JwtTokenProvider.java</code></li>
+      <li><code>JwtHelper.java</code></li>
+      <li><code>OAuth2SuccessHandler.java</code></li>
+    </ul>
+  </li>
+
+  <li>
+    <code>PurrrfectBackendApplication.java</code> — Main Spring Boot entry point
+  </li>
+
+</ul>
+
 
 🔐 Authentication Features
 
