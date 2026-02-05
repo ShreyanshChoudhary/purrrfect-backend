@@ -27,14 +27,44 @@ Maven
 
 src/main/java/com/Purrrfect
 │
-├── Config          → Security, CORS, Cloudinary configs
-├── Controller      → REST API endpoints
-├── Service         → Business logic layer
-├── Repo            → Database repositories
-├── Model / DTO     → Entities & request payloads
-├── Security        → JWT + OAuth2 handling
+├── Config
+│   ├── SecurityConfig.java
+│   ├── WebConfig.java
+│   ├── CloudinaryConfig.java
+│   └── AppConfig.java
+│
+├── Controller
+│   ├── AuthController.java
+│   ├── ProductController.java
+│   ├── UserController.java
+│   └── ChatbotController.java
+│
+├── Service
+│   ├── ProductService.java
+│   ├── ProductServiceImpl.java
+│   ├── UserService.java
+│   └── ChatbotService.java
+│
+├── Repo
+│   ├── ProductRepo.java
+│   ├── UserRepo.java
+│   └── PetDetailsRepo.java
+│
+├── Model / DTO
+│   ├── User.java
+│   ├── Product.java
+│   ├── PetDetails.java
+│   ├── LoginRequest.java
+│   └── SignupRequest.java
+│
+├── Security
+│   ├── JwtAuthenticationFilter.java
+│   ├── JwtTokenProvider.java
+│   ├── JwtHelper.java
+│   └── OAuth2SuccessHandler.java
 │
 └── PurrrfectBackendApplication.java
+
 
 🔐 Authentication Features
 
