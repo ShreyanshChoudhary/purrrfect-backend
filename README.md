@@ -209,40 +209,7 @@ ML pet recommendation engine
 
 
 
----
+👨‍💻 Author
 
-```mermaid
-
-flowchart LR
-
-A[React Frontend] -->|REST API| B[Spring Boot Backend]
-
-B --> C[JWT Authentication]
-B --> D[Google OAuth2]
-
-B --> E[Chatbot Service]
-E -->|API Call| F[Hugging Face AI]
-
-B --> G[Cloudinary]
-B --> H[MySQL Database]
-
-C --> H
-D --> H
-
-
-sequenceDiagram
-
-participant U as User
-participant F as Frontend
-participant B as Backend
-participant DB as Database
-participant AI as HuggingFace
-
-U->>F: Request action
-F->>B: API call
-B->>DB: Fetch / Store data
-B->>AI: Chatbot query
-AI-->>B: Response
-B-->>F: JSON response
-F-->>U: UI update
-
+Shreyansh Choudhary
+Full Stack Developer — Spring Boot & React
