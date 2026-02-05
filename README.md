@@ -211,30 +211,8 @@ ML pet recommendation engine
 
 ---
 
-
-## 🔄 API Flow
-
 ```mermaid
-sequenceDiagram
 
-participant U as User
-participant F as Frontend
-participant B as Backend
-participant DB as Database
-participant AI as HuggingFace
-
-U->>F: Request action
-F->>B: API call
-B->>DB: Fetch / Store data
-B->>AI: Chatbot query
-AI-->>B: Response
-B-->>F: JSON response
-F-->>U: UI update
-
-
-🏗️ System Architecture
-
-```mermaid
 flowchart LR
 
 A[React Frontend] -->|REST API| B[Spring Boot Backend]
@@ -251,4 +229,20 @@ B --> H[MySQL Database]
 C --> H
 D --> H
 
+
+sequenceDiagram
+
+participant U as User
+participant F as Frontend
+participant B as Backend
+participant DB as Database
+participant AI as HuggingFace
+
+U->>F: Request action
+F->>B: API call
+B->>DB: Fetch / Store data
+B->>AI: Chatbot query
+AI-->>B: Response
+B-->>F: JSON response
+F-->>U: UI update
 
