@@ -25,6 +25,7 @@ Maven
 
 
 🏗️ System Architecture
+
 flowchart LR
 
 A[React Frontend] -->|REST API| B[Spring Boot Backend]
@@ -40,6 +41,7 @@ B --> H[MySQL Database]
 
 C --> H
 D --> H
+
 
   <li><b>📁 Config</b>
     <ul>
@@ -115,6 +117,7 @@ Secure password encryption
 
 Custom authentication filters
 
+
 🛍️ Product & Pet Features
 
 Add / update / delete pets
@@ -127,6 +130,7 @@ MySQL database persistence
 
 Image uploads via Cloudinary
 
+
 🤖 AI Chatbot Integration
 
 Powered by Hugging Face Inference API:
@@ -137,6 +141,7 @@ Buyer guidance
 
 FAQ automation
 
+
 ☁️ Media Storage
 
 Cloudinary Integration
@@ -146,6 +151,7 @@ Secure image hosting
 CDN delivery
 
 Optimized pet/product images
+
 
 sequenceDiagram
 
