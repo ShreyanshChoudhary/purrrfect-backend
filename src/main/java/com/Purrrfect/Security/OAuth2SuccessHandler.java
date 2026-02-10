@@ -63,7 +63,7 @@ public class OAuth2SuccessHandler implements AuthenticationSuccessHandler {
         );
 
         String redirectUrl =
-                "http://localhost:5173/oauth2/redirect?token=" + token;
+                "https://purrrfect-frontend-new.vercel.app/oauth2/redirect?token=" + token;
 
         response.sendRedirect(redirectUrl);
     }
