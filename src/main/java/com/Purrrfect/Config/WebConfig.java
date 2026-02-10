@@ -11,7 +11,8 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") // Allowing all endpoints
-                .allowedOrigins("http://localhost:5173/signup-login") // The frontend URL
+                .allowedOrigins("http://localhost:5173/signup-login","https://purrrfect-frontend-new.vercel.app"
+                ) // The frontend URL
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allowed HTTP methods
                 .allowedHeaders("*") // Allow any headers
                 .allowCredentials(true); // Allow credentials like cookies
